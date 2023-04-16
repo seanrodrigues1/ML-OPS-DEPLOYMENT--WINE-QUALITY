@@ -26,4 +26,4 @@ dvc add data_given\winequality.csv
 
 git remote add origin https://github.com/seanrodrigues1/ML-OPS-DEPLOYMENT--WINE-QUALITY
 
-9.fdf
+git push  origin main ( git push -u origin main -f if that does not work )
