@@ -32,4 +32,23 @@ git push  origin main ( git push -u origin main -f if that does not work )
    this file also contains get_data() and read_params() which we require in the load_data.py file we create in the next step
 
 10. create the load_data.py file which loads data in the data/raw folder.To load data in the
-    raw folder, type - python src/load_data  ,note here again we do not have to provide the config file path (ie.config file= params file path )as an argument since we already specified it in the default.
+   raw folder, type - python src/load_data  ,note here again we do not have to provide the config file path (ie.config file= params file path )as an argument since we already specified it in the default.
+   note: we can automatically load the data by writing the stages in the dvc.yaml and typing dvc repro in the command line, this will execute the command present in the dvc.yaml and automatically load the data.(we will do this in the next steps instead of using the cmd manually)
+   Thus we add in the stage load_data and its cmd code, dependencies and output as shown below
+   
+
+  load_data:
+    cmd: python src/load_data.py --config=params.yaml
+    deps:
+    - src/get_data.py
+    - src/load_data.py
+    - data_given/winequality.csv
+    outs:
+    - data/raw/winequality.csv
+
+   note: after typing "dvc repro" all file versions will be updated in the dvc.lock file
+
+11. create split_data.py to create our train test split and save them in data/processed folder. 
+    We add the split_data stage in the dvc.yaml,
+    then type  "dvc repro" on the command line
+    which will execute all code in that stage and actually perform the train test split and save them 
