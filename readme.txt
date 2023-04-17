@@ -27,3 +27,9 @@ dvc add data_given\winequality.csv
 git remote add origin https://github.com/seanrodrigues1/ML-OPS-DEPLOYMENT--WINE-QUALITY
 
 git push  origin main ( git push -u origin main -f if that does not work )
+
+9. create get_data.py file (which enables us to acces data through command line by using python src/get_data )
+   this file also contains get_data() and read_params() which we require in the load_data.py file we create in the next step
+
+10. create the load_data.py file which loads data in the data/raw folder.To load data in the
+    raw folder, type - python src/load_data  ,note here again we do not have to provide the config file path (ie.config file= params file path )as an argument since we already specified it in the default.
