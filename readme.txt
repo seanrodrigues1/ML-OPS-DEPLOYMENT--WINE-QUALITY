@@ -52,3 +52,14 @@ git push  origin main ( git push -u origin main -f if that does not work )
     We add the split_data stage in the dvc.yaml,
     then type  "dvc repro" on the command line
     which will execute all code in that stage and actually perform the train test split and save them 
+
+12. After each stage, dont forget to push to remote repository(ie. github in my case) using :git add . ,git commit -m "stage 2 complete" and git push origin main 
+
+13. Create train and evaluate file where we train the model using Elastic net using parameters alpha and l1 ratio, use performance metrics like MAE RSME,and save the model.
+    Create a folder report and add params.json and scores.json 
+   - We will save our parameters in the report/params.json file .
+   - We will save our metrics in report/scores.json file.
+   - We will save our model in the saved_models folder 
+
+   Note: dvc metrics show  : this will display the metrics values stored in report/scores
+         dvc metrics diff  : this will display the current metrics values and values which have been used in the past
