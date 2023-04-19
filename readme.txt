@@ -4,6 +4,8 @@
 3. create folder structure : we used template.py to create the folder structure,
    but it can be created manually too
 
+IMPORTANT: running template.py also creates a config file called params.yaml which contains the path to all files and also contains the parameter values to use.
+
 4. initialize an empty git repository :
    git init
 
@@ -63,3 +65,4 @@ git push  origin main ( git push -u origin main -f if that does not work )
 
    Note: dvc metrics show  : this will display the metrics values stored in report/scores
          dvc metrics diff  : this will display the current metrics values and values which have been used in the past
+                           - we can change the parameter values in the config file (ie params.yaml) and then use dvc metrics diff to see change in scores.
