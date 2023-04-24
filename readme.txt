@@ -96,3 +96,11 @@ IMPORTANT : __init__.py  is used to make a package. eg. if we create a folder ca
              eg. from prediction service import prediction
                  
                  prediction.predict()    # use a method which is present inside the prediction.py file inside the prediction service package.
+
+19. create .github/workflows/ci-cd.yaml file and write the code which enables automatic deployment.
+
+20. create a new app in heroku , enable automatic deployment and check box wait for ci pass..
+
+21. connect to the github repo and set us github actions. ie. add HEROKU_APP_NAME and HEROKU_API_TOKEN in the secrets section.
+
+22. Create a proc file which tells heroku to run on gunicorn server and run app.py
