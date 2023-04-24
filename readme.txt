@@ -66,3 +66,33 @@ git push  origin main ( git push -u origin main -f if that does not work )
    Note: dvc metrics show  : this will display the metrics values stored in report/scores
          dvc metrics diff  : this will display the current metrics values and values which have been used in the past
                            - we can change the parameter values in the config file (ie params.yaml) and then use dvc metrics diff to see change in scores.
+
+
+14: add pytest and tox in requirements and install it by pip install -r requirements.txt.
+
+ TOX: tox aims to automate and standardize testing in Python. It is part of a larger vision of easing the packaging, testing and release process of Python software (alongside pytest and devpi).
+      tox is a generic virtual environment management and test command line tool you can use for:
+
+- checking your package builds and installs correctly under different environments (such as different Python implementations, versions or installation dependencies),
+- running your tests in each of the environments with the test tool of choice,
+- acting as a frontend to continuous integration servers, greatly reducing boilerplate and merging CI and shell-based testing.
+
+15. create tox.ini file first.add code in it. ie. the different python environments to test in and what needs to be tested
+    run tox command on command line to run the tox.ini file.
+
+16. Create tests folder and add conftest.py and test_config.py and __init__.py files in it
+
+17.create setup.py file. this file helps to automatically install all packages.It looks for folders containing  __init__.py and installs all packages within that folder.
+  use pip install e .  to run the setup file and install the packages.
+  
+
+18. create - prediction_service directory inside which you create model folder,__init__.py and prediction.py , 
+           - webapp directory(folder),inside which we create static folder inside which we create css and script folder.inside css folder create main.css
+             we also create a templates folder inside webapp folder in which we create index.html, 404.html and base.html
+           - app.py file
+
+IMPORTANT : __init__.py  is used to make a package. eg. if we create a folder called prediction service and we create __init__.py inside it that folder becomes a package.
+             so suppose we have a prediction.py file in it which has a method called predict , we can use that method from a different location by importing that package and then callign that method from that py file
+             eg. from prediction service import prediction
+                 
+                 prediction.predict()    # use a method which is present inside the prediction.py file inside the prediction service package.
