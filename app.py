@@ -9,7 +9,7 @@ from sklearn.preprocessing import StandardScaler
 app = Flask(__name__, template_folder='C:/Users/seanr/Desktop/wine_quality/webapp/templates')   # template_folder='templates'
 
 
-model = joblib.load("C:/Users/seanr/Desktop/wine_quality/saved_models/model.joblib")
+model = joblib.load("C:/Users/seanr/Desktop/wine_quality/src/model.joblib")
     
 
 @app.route('/')           #,methods=['GET']
