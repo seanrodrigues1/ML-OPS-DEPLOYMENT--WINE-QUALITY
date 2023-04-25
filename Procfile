@@ -1,0 +1,1 @@
+web gunicorn app:app            #use gunicorn server in heroku and run app.py
