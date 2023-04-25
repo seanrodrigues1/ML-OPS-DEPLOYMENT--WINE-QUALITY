@@ -1,4 +1,4 @@
-d# local package install
+# local package install
 -e .
 
 # third party packages
