@@ -12,7 +12,7 @@ app = Flask(__name__, template_folder='C:/Users/seanr/Desktop/wine_quality/webap
 model = joblib.load("C:/Users/seanr/Desktop/wine_quality/src/model.joblib")
     
 
-@app.route('/')           #,methods=['GET']
+@app.route('/',methods=['GET'])           #,methods=['GET']
 def Home():
     return render_template('index.html')
 
