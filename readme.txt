@@ -104,3 +104,5 @@ IMPORTANT : __init__.py  is used to make a package. eg. if we create a folder ca
 21. connect to the github repo and set us github actions. ie. add HEROKU_APP_NAME and HEROKU_API_TOKEN in the secrets section.
 
 22. Create a proc file which tells heroku to run on gunicorn server and run app.py
+
+23. now when we push to github app automatically gets deployed on heroku.
